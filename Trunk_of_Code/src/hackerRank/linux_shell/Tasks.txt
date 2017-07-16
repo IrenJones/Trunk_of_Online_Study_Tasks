@@ -1,14 +1,29 @@
 1) Let's Echo
 
+#!/bin/bash
 echo HELLO
 
 2) Looping and Skipping
 
+#!/bin/bash
 X=1
 while [ $X -le 100 ]
 do
 	echo $X
 	X=$((X+2))
+done
+
+or we can done it using if statement
+
+#!/bin/bash
+X=0
+while [ $X -le 100 ]
+do
+if [ $(($X%2)) != 0 ];
+then
+echo $X
+fi
+X=$((X+1))
 done
 
 3) 
