@@ -13,7 +13,7 @@ do
 	X=$((X+2))
 done
 
-or we can done it using if statement
+or we can do it using if statement
 
 #!/bin/bash
 X=0
