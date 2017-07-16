@@ -5,7 +5,6 @@ do
 	echo $X
 	X=$((X+2))
 done
-
 X=0
 while [ $X -le 100 ]
 do
@@ -15,3 +14,4 @@ echo $X
 fi
 X=$((X+1))
 done
+
