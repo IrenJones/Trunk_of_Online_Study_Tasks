@@ -4,3 +4,11 @@ echo HELLO
 
 2) Looping and Skipping
 
+X=1
+while [ $X -le 100 ]
+do
+	echo $X
+	X=$((X+2))
+done
+
+3) 
