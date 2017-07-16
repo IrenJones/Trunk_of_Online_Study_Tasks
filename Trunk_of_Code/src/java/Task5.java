@@ -11,10 +11,10 @@ public class Task5 {
 	            {
 	                String s1=sc.next();
 	                int x=sc.nextInt();
-	                int space_count = s1.length();
 	                System.out.printf("%-15s%03d\n", s1,x);
 	            }
 	            System.out.println("================================");
+	            sc.close();
 
 	    }
 }
