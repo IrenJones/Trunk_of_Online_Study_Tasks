@@ -1,0 +1,6 @@
+1) Let's Echo
+
+echo HELLO
+
+2) Looping and Skipping
+
