@@ -1,4 +1,4 @@
-package java_course.intro;
+package hackerRank.java;
 
 import java.util.Scanner;
 
