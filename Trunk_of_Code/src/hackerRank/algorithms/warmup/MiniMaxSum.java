@@ -30,5 +30,6 @@ public class MiniMaxSum {
 			}
 		}
 		System.out.println(mini + " " + maxi);
+		in.close();
 	}
 }
