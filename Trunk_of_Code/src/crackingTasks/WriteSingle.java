@@ -1,4 +1,4 @@
-package interestingTasksFromInterview;
+package crackingTasks;
 
 import java.util.Scanner;
 
@@ -9,6 +9,7 @@ import java.util.Scanner;
  * n (n is an integer positive number)
  *
  */
+
 
 public class WriteSingle {
 	public static void main(String[] args){
