@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * 
  * Вывести все подстроки определенной длины с указанием позиций, в которых они встретились
- * Зкште all substrings of a certain length, indicating the positions in which they met
+ * Print all substrings of a certain length, indicating the positions in which they met
  *
  */
 
