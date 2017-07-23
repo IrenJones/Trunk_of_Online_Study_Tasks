@@ -9,6 +9,14 @@ import java.util.List;
  * 
  * Вывести все подстроки определенной длины с указанием позиций, в которых они встретились
  * Print all substrings of a certain length, indicating the positions in which they met
+ * 
+ * F.e:
+ * 
+ * for sequence ACCCGCCTGC and m = 2 program should print:
+ * AC - 0
+ * CC - 1,2,5
+ * CG - 4,8
+ * CT - 6
  *
  */
 
