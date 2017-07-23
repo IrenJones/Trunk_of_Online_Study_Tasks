@@ -2,6 +2,14 @@ package crackingTasks;
 
 import java.util.Scanner;
 
+/**
+ * 
+ * Numbers n, m, a[n]  are given. For each subarray of length = m (all elements are situated one next other)
+ * calculate sum of that elements. All number of actions should be O(n).
+ *
+ */
+
+
 public class FindSumOfSubarr {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
@@ -11,15 +19,15 @@ public class FindSumOfSubarr {
 		int m = in.nextInt();
 		int locSum = 0;
 		
-		int []arr = new int [n];
+		int []a = new int [n];
 		
 		for(int i=0;i<n;i++){
-			arr[i] = in.nextInt();
+			a[i] = in.nextInt();
 		}
 		
 		for(int i = 0; i<n-m;i++){
 			for (int j=0;j<m;j++){
-				locSum+=arr[i+j];
+				locSum+=a[i+j];
 			}
 			System.out.print(locSum + " ");
 			locSum = 0;
