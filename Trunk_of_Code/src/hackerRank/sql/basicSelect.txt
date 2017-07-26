@@ -33,8 +33,58 @@ Task: Weather Observation Station 1
 SELECT CITY, STATE FROM STATION;
 
 _________________________________
+Task: Weather Observation Station 3
+
+SELECT DISTINCT CITY FROM STATION WHERE MOD(ID, 2) = 0 ORDER BY CITY;
+
+_________________________________
+Task: Weather Observation Station 4
+
+SELECT (COUNT(CITY)-COUNT(DISTINCT CITY)) FROM STATION;
+
+_________________________________
 Task:
 
 
 _________________________________
 Task:
+
+
+_________________________________
+Task:
+
+
+_________________________________
+Task:
+
+
+_________________________________
+Task:
+
+
+_________________________________
+Task:
+
+
+_________________________________
+Task:
+
+
+_________________________________
+Task:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
