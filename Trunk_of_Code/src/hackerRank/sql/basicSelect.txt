@@ -1,0 +1,40 @@
+Task: Revising the Select Query I
+
+SELECT * FROM CITY WHERE POPULATION> 100000 AND COUNTRYCODE = "USA";
+
+_________________________________
+Task: Revising the Select Query II
+
+SELECT NAME FROM CITY WHERE POPULATION> 120000 AND COUNTRYCODE = "USA";
+
+_________________________________
+Task: Select All
+
+SELECT * FROM CITY;
+
+_________________________________
+Task: Select By ID
+
+SELECT * FROM CITY WHERE ID = 1661;
+
+_________________________________
+Task: Japanese Cities' Attributes
+
+SELECT * FROM CITY WHERE COUNTRYCODE = "JPN";
+
+_________________________________
+Task: Japanese Cities' Names
+
+SELECT NAME FROM CITY WHERE COUNTRYCODE = "JPN";
+
+_________________________________
+Task: Weather Observation Station 1
+
+SELECT CITY, STATE FROM STATION;
+
+_________________________________
+Task:
+
+
+_________________________________
+Task:
