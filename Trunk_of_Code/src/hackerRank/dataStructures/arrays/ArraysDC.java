@@ -2,7 +2,7 @@ package hackerRank.dataStructures.arrays;
 
 import java.util.Scanner;
 
-public class ArraysDCSolution {
+public class ArraysDC {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
