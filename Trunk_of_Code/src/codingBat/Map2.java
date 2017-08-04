@@ -89,7 +89,7 @@ public class Map2 {
 
 		return result;
 	}
-	
+
 	public Map<String, Boolean> wordMultiple(String[] strings) {
 		Map<String, Boolean> res = new HashMap<String, Boolean>();
 		for (int i = 0; i < strings.length; i++) {
@@ -101,6 +101,47 @@ public class Map2 {
 		}
 
 		return res;
+	}
+
+	public String[] allSwap(String[] strings) {
+		Map<String, Integer> res = new HashMap<String, Integer>();
+		int index;
+		String tmp;
+		for (int i = 0; i < strings.length; i++) {
+			if (!res.containsKey("" + strings[i].charAt(0))) {
+				res.put("" + strings[i].charAt(0), i);
+			} else {
+				index = res.get("" + strings[i].charAt(0));
+				tmp = strings[index];
+				strings[index] = strings[i];
+				strings[i] = tmp;
+				res.remove("" + strings[i].charAt(0));
+			}
+		}
+		return strings;
+	}
+	
+	public String[] firstSwap(String[] strings) {
+		Map<String, Integer> res = new HashMap<String, Integer>();
+		Map<String, Boolean> check = new HashMap<String, Boolean>();
+		int index;
+		String tmp;
+		for (int i = 0; i < strings.length; i++) {
+			if (!res.containsKey("" + strings[i].charAt(0)) && !check.containsKey("" + strings[i].charAt(0))) {
+				res.put("" + strings[i].charAt(0), i);
+				check.put("" + strings[i].charAt(0), true);
+			} else {
+				if (check.get("" + strings[i].charAt(0)) == true) {
+					index = res.get("" + strings[i].charAt(0));
+					tmp = strings[index];
+					strings[index] = strings[i];
+					strings[i] = tmp;
+					res.remove("" + strings[i].charAt(0));
+					check.put("" + strings[i].charAt(0), false);
+				}
+			}
+		}
+		return strings;  
 	}
 
 	public static void main(String[] args) {
