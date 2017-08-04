@@ -186,6 +186,40 @@ public class Recursion1 {
 		}
 		return count + countPairs(str.substring(1, str.length()));
 	}
+
+	public int countAbc(String str) {
+		if (str.length() < 3) {
+			return 0;
+		}
+
+		int count = 0;
+		if (str.substring(0, 3).equals("abc") || str.substring(0, 3).equals("aba")) {
+			count++;
+		}
+		return count + countAbc(str.substring(1, str.length()));
+	}
+
+	public int count11(String str) {
+		if (str.length() < 2) {
+			return 0;
+		}
+
+		int count = 0;
+		if (str.substring(0, 2).equals("11")) {
+			count++;
+		}
+		return count + count11(str.substring(1 + count, str.length()));
+	}
+
+	public String stringClean(String str) {
+		if (str.length() <= 1) {
+			return str;
+		}
+		if (str.charAt(0) == str.charAt(1)) {
+			return stringClean(str.substring(1, str.length()));
+		}
+		return str.charAt(0) + stringClean(str.substring(1, str.length()));
+	}
 	
 	
 
