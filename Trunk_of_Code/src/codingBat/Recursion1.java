@@ -220,8 +220,90 @@ public class Recursion1 {
 		}
 		return str.charAt(0) + stringClean(str.substring(1, str.length()));
 	}
-	
-	
+
+	public int countHi2(String str) {
+		int len = str.length();
+		if (len < 2) {
+			return 0;
+		}
+		int res = 0;
+		if (str.substring(len - 2).equals("hi")) {
+			if ((len > 2 && str.charAt(len - 3) != 'x') || len == 2) {
+				res++;
+			}
+		}
+		return res + countHi2(str.substring(0, len - 1));
+	}
+
+	public String parenBit(String str) {
+		if (str.length() < 1) {
+			return str;
+		}
+		if (str.charAt(0) == '(') {
+			if (str.charAt(str.length() - 1) == ')') {
+				return str;
+			} else {
+				return parenBit(str.substring(0, str.length() - 1));
+			}
+		} else {
+			return parenBit(str.substring(1));
+		}
+	}
+
+	public boolean nestParen(String str) {
+		if (str.length() < 2) {
+			if (!(str.equals("(") || str.equals(")"))) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+		if (str.charAt(0) == '(' && str.charAt(str.length() - 1) == ')') {
+			return nestParen(str.substring(1, str.length() - 1));
+		} else {
+			return false;
+		}
+	}
+
+	public int strCount(String str, String sub) {
+		if (str.length() < sub.length()) {
+			return 0;
+		}
+		if (str.substring(0, sub.length()).equals(sub)) {
+			return 1 + strCount(str.substring(sub.length()), sub);
+		} else {
+			return strCount(str.substring(1), sub);
+		}
+	}
+
+	public boolean strCopies(String str, String sub, int n) {
+		if (str.length() < sub.length()) {
+			if (n <= 0) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+		if (str.substring(0, sub.length()).equals(sub)) {
+			return strCopies(str.substring(1), sub, n - 1);
+		} else {
+			return strCopies(str.substring(1), sub, n);
+		}
+	}
+
+	public int strDist(String str, String sub) {
+		if (str.length() < sub.length()) {
+			return 0;
+		} else if (str.substring(0, sub.length()).equals(sub)) {
+			if (str.substring(str.length() - sub.length()).equals(sub)) {
+				return str.length();
+			} else {
+				return strDist(str.substring(0, (str.length() - 1)), sub);
+			}
+		} else {
+			return strDist(str.substring(1), sub);
+		}
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
